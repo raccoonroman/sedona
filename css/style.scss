@@ -37,11 +37,6 @@ a {
 	text-decoration: none;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
-
 ul {
 	margin: 0;
 	padding: 0;
@@ -73,18 +68,10 @@ input[type="radio"].visually-hidden {
 
 .nav-list {
 	display: flex;
-
-	.nav-item-logo {
-		line-height: 0;
-
-		.page-header-logo {
-			height: 70px;
-		}
-	}
 }
 
 .nav-item {
-	flex-grow: 1;
+	width: 20%;
 	height: 56px;
 
 	a {
@@ -110,9 +97,18 @@ input[type="radio"].visually-hidden {
 	}
 }
 
+.nav-item-logo {
+	line-height: 0;
+
+	.page-header-logo {
+		height: 70px;
+	}
+}
+
 .promo {
 	width: 100%;
 	height: 508px;
+	margin-bottom: 61px;
 	padding-top: 76px;
 	background: 
 		url(../img/promo-layer.png) center bottom no-repeat, 
@@ -124,3 +120,133 @@ input[type="radio"].visually-hidden {
 		margin: 0 auto;
 	}
 }
+
+.advantages-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.advantages-title {
+	margin: 0;
+	margin-bottom: 27px;
+	text-align: center;
+	font-size: 21px;
+	font-weight: 700;
+}
+
+.advantages-desc {
+	margin: 0;
+	margin-bottom: 50px;
+	text-align: center;
+	color: #333;
+}
+
+.advantage-item {
+	width: calc(100%/3);
+	min-height: 256px;
+	padding: 47px 5% 10px;
+	text-align: center;
+}
+
+.advantage-town-item {
+	position: relative;
+	width: calc(100%/3);
+	min-height: 330px;
+	padding: 161px 5% 10px;
+	text-align: center;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		-webkit-transform: translate(-50%);
+				transform: translate(-50%);
+	}
+
+	.advantage-item-title {
+		margin-bottom: 24px;
+	}
+}
+
+.advantage-housing::before {
+	top: 60px;
+	width: 75px;
+	height: 72px;
+	background: url(../img/icon-housing.svg) no-repeat;
+}
+
+.advantage-food::before {
+	top: 61px;
+	width: 74px;
+	height: 70px;
+	background: url(../img/icon-food.svg) no-repeat;
+}
+
+.advantage-souvenirs::before {
+	top: 56px;
+	width: 64px;
+	height: 76px;
+	background: url(../img/icon-souvenirs.svg) no-repeat;
+}
+
+.advantage-item-title {
+	margin: 0 12% 20px;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 21px;
+}
+
+.advantage-item-number {
+	margin: 0;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+.advantage-item-desc {
+	margin: 0;
+	color: #333;
+	line-height: 21px;
+}
+
+.advantage-item:nth-child(1),
+.advantage-item:nth-child(5) {
+	display: flex;
+	width: 100%;
+	padding: 0;
+	
+	.wrapper {
+		width: calc(100% / 3);
+		padding: 47px 5% 10px;
+		background-color: #81b3d2;
+	}
+
+	.advantage-item-title,
+	.advantage-item-number,
+	.advantage-item-desc {
+		color: #fff;
+	}
+
+	.advantage-item-img {
+		width: calc(100% / 3 * 2);
+	}
+}
+
+.advantage-item:nth-child(1) .advantage-item-img {
+	background: #aa8a7d url(../img/town.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.advantage-item:nth-child(5) .advantage-item-img {
+	background: #e2b29c url(../img/bridge.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.advantages-town-list {
+	width: 100%;
+}
+
+.advantage-item:nth-last-child(-n+3) {
+	background-color: #eee;
+}
+
