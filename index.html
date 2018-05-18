@@ -82,7 +82,35 @@
 				</li>
 			</ul>
 		</section>
+
+		<section class="hotels">
+			<p class="hotels-title"><b>Заинтересовались?</b></p>
+			<p class="hotels-desc">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+			<button class="btn hotels-btn" type="button">Поиск гостинницы в Седоне</button>
+			<div class="container-form-hotels">
+				<form class="form-hotels" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+					<p class="form-hotels-group">
+						<label for="arrival-field">Дата заезда:</label>
+						<input id="arrival-field" type="date" name="arrival-field" value="2017-04-24" required>
+					</p>
+					<p class="form-hotels-group">
+						<label for="departure-field">Дата Выезда:</label>
+						<input id="departure-field" type="date" name="departure-field" value="2017-07-04" required>
+					</p>
+					<p class="form-hotels-group">
+						<label for="adults-field">Взрослые:</label>
+						<input id="adults-field" type="number" name="adults-field" min="1" max="10" value="2" required>
+						<label for="children-field">Дети:</label>
+						<input id="children-field" type="number" name="children-field" min="0" max="10" value="0">
+					</p>
+					<button class="btn submit-btn">Найти</button>
+				</form>
+			</div>
+			
+			<img class="map" src="img/map.jpg" alt="Седона на карте" width="1200" height="748">
+		</section>
 	</main>
 </div>
+<script src="js/script.js"></script>
 </body>
 </html>

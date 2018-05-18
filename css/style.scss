@@ -1,3 +1,5 @@
+$hotelswidth: 568px;
+
 @font-face {
 	font-family: "PT Sans";
 	font-weight: 400;
@@ -249,4 +251,141 @@ input[type="radio"].visually-hidden {
 .advantage-item:nth-last-child(-n+3) {
 	background-color: #eee;
 }
+
+.btn {
+	display: inline-block;
+	font-size: 21px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	border: none;
+}
+
+
+.hotels {
+	text-align: center;
+}
+
+.hotels-title {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 36px;
+}
+
+.hotels-desc {
+	line-height: 24px;
+}
+
+.hotels-btn {
+	width: $hotelswidth;
+	padding: 31px 0;
+	background-color: #766357;
+	transition: background-color .3s;
+
+	&:hover,
+	&:focus {
+		background-color: #604e43;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, .3);
+		background-color: #503e33;
+	}
+}
+
+.container-form-hotels {
+	position: relative;
+	margin: 0 auto;
+	width: $hotelswidth;
+}
+
+.form-hotels {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0;
+	overflow: hidden;
+	padding: 0 55px;
+	background-color: #fff;
+	box-shadow: 0 7px 15px rgba(0, 1, 1, .15);
+	transition: 0.4s;
+
+	.submit-btn {
+		width: 100%;
+		padding: 17px 0;
+		background-color: #81b3d2;
+
+		&:hover,
+		&:focus {
+			background-color: #669ec0;
+		}
+
+		&:active {
+			color: rgba(255, 255, 255, .3);
+			background-color: #5496bd;
+		}
+	}
+}
+
+.form-hotels.active {
+	padding: 55px;
+	height: 395px;
+}
+
+.form-hotels-group {
+	display: flex;
+	margin: 0;
+	margin-bottom: 30px;
+	font-weight: 700;
+
+	&:last-of-type {
+		margin-bottom: 54px;
+	}
+
+	label {
+		width: 112px;
+		padding: 5px 0;
+		font-size: 14px;
+		text-align: left;
+		vertical-align: middle;
+	}
+
+	input {
+		flex-grow: 1;
+		padding: 5px 13px;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 26px;
+		text-transform: uppercase;
+		background-color: #f2f2f2;
+		border: none;
+
+		&:hover {
+			background-color: #ebebeb;
+		}
+
+		&:focus {
+			outline: 2px solid #e5e5e5;
+			background-color: #fff;
+		}
+	}
+
+	input[type="number"] {
+		width: 114px;
+		text-align: center;
+	}
+
+	label[for="children-field"] {
+		padding-right: 27px;
+		text-align: right;
+	}
+}
+
+.map {
+	max-width: 100%;
+	height: auto;
+}
+
+
 
