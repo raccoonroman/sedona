@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>sedona - hotels</title>
+	<link rel="stylesheet" href="css/normalize-min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+	<header class="page-header">
+		<nav class="page-nav">
+			<ul class="nav-list">
+				<li class="nav-item"><a href="#">Информация</a></li>
+				<li class="nav-item"><a href="#">Фото и видео</a></li>
+				<li class="nav-item nav-item-logo">
+					<a href="index.html" title="На главную" class="page-header-logo">
+						<img src="img/logo.png" alt="Логотип Седона" width="138" height="70">
+					</a>
+				</li>
+				<li class="nav-item"><a href="#">Карта штата</a></li>
+				<li class="nav-item"><a>Гостинницы</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="filters">
+			<h2 class="visually-hidden">Фильтр гостинниц</h2>
+			<form class="form-filter" action="https://echo.htmlacademy.ru" method="get" target="_blank">
+				<div class="filter-range">
+					<p class="filter-range-title">Стоимость в сутки (Р):</p>
+					<div class="price-controls">
+						<label class="min-price">
+							от <input type="text" name="min-price" value="0">
+						</label>
+						<label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+					</div>
+					<div class="range-controls">
+						<div class="scale">
+		          <div class="bar"></div>
+		        </div>
+		        <div class="range-toggle range-toggle-min"></div>
+        		<div class="range-toggle range-toggle-max"></div>
+					</div>
+					<button class="btn-transparent">Показать</button>
+				</div>
+			</form>
+		</section>
+	</main>
+</div>
+</body>
+</html>
