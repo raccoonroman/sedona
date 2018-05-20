@@ -28,6 +28,42 @@
 		<section class="filters">
 			<h2 class="visually-hidden">Фильтр гостинниц</h2>
 			<form class="form-filter" action="https://echo.htmlacademy.ru" method="get" target="_blank">
+				<fieldset class="filter-item">
+					<legend>Инфраструктура:</legend>
+					<ul>
+						<li>
+							<input class="visually-hidden" type="checkbox" id="filter-pool" name="pool" checked>
+							<label for="filter-pool">Бассейн</label>
+						</li>
+						<li>
+							<input class="visually-hidden" type="checkbox" id="filter-parking" name="parking">
+							<label for="filter-parking">Парковка</label>
+						</li>
+						<li>
+							<input class="visually-hidden" type="checkbox" id="filter-wi-fi" name="wi-fi">
+							<label for="filter-wi-fi">Wi-Fi</label>
+						</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="filter-item">
+					<legend>Тип жилья:</legend>
+					<ul>
+						<li>
+							<input class="visually-hidden" type="checkbox" id="filter-hotel" name="hotel" checked>
+							<label for="filter-hotel">Гостиница</label>
+						</li>
+						<li>
+							<input class="visually-hidden" type="checkbox" id="filter-motel" name="motel" checked>
+							<label for="filter-motel">Мотель</label>
+						</li>
+						<li>
+							<input class="visually-hidden" type="checkbox" id="filter-apartments" name="apartments" checked>
+							<label for="filter-apartments">Апартаменты</label>
+						</li>
+					</ul>
+				</fieldset>
+
 				<div class="filter-range">
 					<p class="filter-range-title">Стоимость в сутки (Р):</p>
 					<div class="price-controls">

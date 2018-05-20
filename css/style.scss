@@ -474,18 +474,92 @@ input[type="radio"].visually-hidden {
 
 .filters {
 	height: 217px;
-	background: url(../img/bg-filter.jpg) center no-repeat;
+	background: #3c719b url(../img/bg-filter.jpg) center no-repeat;
 	background-size: cover;
 	color: #fff;
 }
 
+.form-filter {
+	display: flex;
+	padding: 27px 6% 10px;
+}
+
+.filter-item {
+	margin: 0;
+	margin-right: 11.1%;
+	padding: 0;
+	border: none;
+
+	legend {
+		margin-bottom: 24px;
+		font-size: 16px;
+		line-height: 21px;
+		font-weight: 700;
+	}
+
+	li {
+		margin-bottom: 20px;
+	}
+
+	label {
+		position: relative;
+		display: block;
+		padding-left: 40px;
+		cursor: pointer;
+	}
+
+	input + label::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 23px;
+		height: 23px;
+		border: 2px solid #fff;
+		border-radius: 3px;
+	}
+
+	input:checked + label::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 27px;
+		height: 23px;
+		background: url(../img/checkbox-on.svg) no-repeat;
+	}
+
+	input:checked + label::before,
+    input:checked + label:hover::before,
+    input:checked:focus + label::before {
+        border-color: transparent;
+    }
+
+    input:disabled + label {
+		cursor: default;
+	}
+
+    input:disabled + label::before {
+        border-color: #6a6a6a;
+    }
+    
+    input:checked:disabled + label::before {
+        border-color: transparent;
+    }
+
+    input:checked:disabled + label::after {
+        background: url(../img/checkbox-off.svg) no-repeat;
+    }
+}
+
 .filter-range {
-	width: 320px;
+	margin-left: auto;
+	width: 318px;
 }
 
 .filter-range-title {
 	margin: 0;
-	margin-bottom: 9px;
+	margin-bottom: 10px;
 	font-size: 16px;
 	line-height: 21px;
 	font-weight: 700;
@@ -521,8 +595,7 @@ input[type="radio"].visually-hidden {
 
 	.min-price,
 	.max-price {
-		width: 155px;
-		padding-left: 65px;
+		padding-left: 20%;
 	}
 
 	input {
@@ -562,16 +635,27 @@ input[type="radio"].visually-hidden {
 		cursor: pointer;
 
 		&:hover {
-			background: #1c4f80;
+			top: -10px;
+			width: 22px;
+			height: 22px;
+			border-width: 9px;
 		}
 	}
 
 	.range-toggle-min {
 		left: 0;
+
+		&:hover {
+			left: -1px;
+		}
 	}
 
 	.range-toggle-max {
 		left: 80%;
+
+		&:hover {
+			left: calc(80% - 1px);
+		}
 	}
 }
 
